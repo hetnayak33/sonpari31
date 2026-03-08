@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SP News</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg,#ffd6e7,#ffe9f3);
+    color:#333;
+    text-align:center;
+}
+
+section{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+h1{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:18px;
+    max-width:650px;
+    line-height:1.7;
+}
+
+button{
+    margin-top:30px;
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    background:#ff6fa5;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff4f91;
+}
+
+.final{
+    font-size:20px;
+}
+</style>
+
+<script>
+function nextSection(id){
+    document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+</script>
+
+</head>
+
+<body>
+
+<section>
+<h1>Hello Sonpari!</h1>
+
+<p>Maare tane bau time thi kai kehwu tu.</p>
+
+<button onclick="nextSection('one')">Continue</button>
+</section>
+
+<section id="one">
+<h1>Sonpari Sanyal</h1>
+
+<p>I like you &#128151;</p>
+
+<button onclick="nextSection('two')">Continue</button>
+</section>
+
+<section id="two">
+	
+<h1>&#128151;</h1>
+
+<p>Maane Class 10th na Day 1 thi tara upar Crush chhe.</p>
+	
+<p> Almost 7 varas thai gaya.</p>
+	
+<p>Mai aaje sudhi kai kidhu na kem ke mu try karto toh accept karwanu ke aapde khali best friends chiye. But maaru mann accept natu kartu. </p>
+
+<button onclick="nextSection('three')">Continue</button>
+</section>
+
+<section id="three">
+	
+<h1>&#128151;</h1>
+
+<p>I know tu maara maate same feel nai karti. But maane maari feelings tara jode share karwi ti.</p>
+
+<p>Maane guilt ma natu rehwu ke “Kaash mai confess kari didhu hot.”</p>
+
+<p>I’m sorry mai tane full awkward kari didhu hase, but maane answer joi toh haato.</p>
+
+<button onclick="nextSection('four')">Continue</button>
+</section>
+
+<section id="four">
+
+<h1 class="four">Taaro je pan answer haase, mu accept kari lais.</h1>
+
+<p>Agar tane mane chance aapwo hoye, toh Thank You.</p>
+
+<p>Agar tare khali friends aj rehwu hoye, toh pan mane kai problem nathi.</p>
+
+<p>And agar tane aaj pachi maara jode waat pan na karwi hoye, toh pan mu okay chhu.</p>
+	
+<button onclick="nextSection('five')">Continue</button>
+
+</section>
+	
+<section id="five">
+	
+<h1>I like you.</h1>
+
+<p>- Teddy Bear</p>
+
+<button onclick="nextSection('six')">Continue</button>
+</section>
+	
+<section id="six">
+	
+<img src="BCKD.jpeg" alt="Bina Class Ka Darwaja">
+	
+</section>
+
+</body>
+</html>
