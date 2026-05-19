@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>SP News</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      background:#0f0f0f;
+      color:white;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      background:#black;
+      padding:18px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .logo{
+      font-size:34px;
+      font-weight:800;
+    }
+
+    .logo span{
+      color:yellow;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:30px;
+    }
+
+    .nav-links a{
+      text-decoration:none;
+      color:white;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    .nav-links a:hover{
+      color:greenyellow;
+    }
+
+    /* BREAKING NEWS */
+
+    .ticker{
+      background:pink;
+      color:black;
+      padding:12px 0;
+      overflow:hidden;
+      white-space:nowrap;
+      font-weight:700;
+    }
+
+    .ticker p{
+      display:inline-block;
+      padding-left:100%;
+      animation:scroll 18s linear infinite;
+    }
+
+    @keyframes scroll{
+      0%{
+        transform:translateX(0);
+      }
+
+      100%{
+        transform:translateX(-100%);
+      }
+    }
+
+    /* HERO SECTION */
+
+    .hero{
+      height:90vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:0 10%;
+      background:
+      linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+      url('https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=1400&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+    }
+
+    .hero-content h1{
+      font-size:70px;
+      font-weight:800;
+      margin-bottom:20px;
+      color:white;
+    }
+
+    .hero-content h1 span{
+      color:yellow;
+    }
+
+    .hero-content p{
+      font-size:24px;
+      color:#ddd;
+      margin-bottom:35px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:14px 30px;
+      border:none;
+      border-radius:8px;
+      font-size:16px;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .btn-red{
+      background:#c40000;
+      color:white;
+    }
+
+    .btn-yellow{
+      background:yellow;
+      color:black;
+    }
+
+    .btn:hover{
+      transform:translateY(-4px);
+    }
+
+    /* SECTION */
+
+    section{
+      padding:70px 8%;
+    }
+
+    .section-title{
+      font-size:40px;
+      margin-bottom:40px;
+      color:white;
+      text-align:center;
+    }
+
+    /* NEWS GRID */
+
+    .news-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+      gap:30px;
+    }
+
+    .news-card{
+      background:#1b1b1b;
+      border-radius:15px;
+      overflow:hidden;
+      transition:0.3s;
+    }
+
+    .news-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .news-card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .news-content{
+      padding:20px;
+    }
+
+    .category{
+      background:#c40000;
+      display:inline-block;
+      padding:6px 12px;
+      border-radius:5px;
+      font-size:13px;
+      margin-bottom:15px;
+      font-weight:600;
+    }
+
+    .news-content h3{
+      font-size:22px;
+      margin-bottom:12px;
+    }
+
+    .news-content p{
+      color:#bbb;
+      line-height:1.6;
+    }
+
+    /* LIVE ALERT */
+
+    .alert-box{
+      background:#c40000;
+      padding:40px;
+      border-radius:18px;
+      text-align:center;
+    }
+
+    .alert-box h2{
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    .alert-box p{
+      font-size:20px;
+      color:#f5f5f5;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#000;
+      padding:40px 8%;
+      text-align:center;
+    }
+
+    footer h2{
+      color:white;
+      margin-bottom:15px;
+    }
+
+    footer p{
+      color:#white;
+      line-height:1.7;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      .hero-content h1{
+        font-size:45px;
+      }
+
+      .hero-content p{
+        font-size:18px;
+      }
+
+      .nav-links{
+        display:none;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="logo">
+    SP NEWS
+    </div>
+
+    <div class="nav-links">
+      <a href="#">Het</a>
+      <a href="#">Parth</a>
+      <a href="#">Raunak</a>
+      <a href="#">Sonpari</a>
+    </div>
+
+  </nav>
+
+  <!-- BREAKING TICKER -->
+
+  <div class="ticker">
+    <p>
+      BREAKING NEWS: Sonpari ne kiya Teddy Bear ko reject. Teddy Bear hua dukhi. Wo ab karne wala hai Sonpari pe case. Ye case sidha supreme court may jaane wala hai. Aur uska ye case Kankrol ke mashhur lawyer Shri Tyson Sanyal ladne wale hai.
+    </p>
+  </div>
+
+  <!-- HERO SECTION -->
+
+  <div class="hero">
+
+    <div class="hero-content">
+
+      <h1>
+        SP News
+      </h1>
+
+      <p>
+        De sabse pakau news, sabse pehle
+      </p>
+
+      <div class="hero-buttons">
+
+        <button class="btn">
+          Sonpari
+        </button>
+
+        <button class="btn">
+          Sanyal
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- MORE NEWS -->
+
+  <section>
+
+    <h2 class="section-title">
+      More Bakchodi
+    </h2>
+
+    <div class="news-grid">
+
+      <div class="news-card">
+
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="news-content">
+
+          <div class="category">
+            Parth
+          </div>
+
+          <h3>
+            Parth Gadhvi released a new song
+          </h3>
+
+          <p>
+            Parth Gadhvi ne kiya ek naya gaana release. Audience unki singing skills ko Gian se compare kar rahe hai.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="news-card">
+
+        <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="news-content">
+
+          <div class="category">
+            Raunak
+          </div>
+
+          <h3>
+            Raunak Singh audio leak
+          </h3>
+
+          <p>
+            Raunak Singh ka hua audio leak. Unke fans Twitter pe decode karne may lag chuke hai.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="news-card">
+
+        <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="news-content">
+
+          <div class="category">
+            Sonpari
+          </div>
+
+          <h3>
+            Sonpari finally breaks silence on Bina Class Ka Darwaja
+          </h3>
+
+          <p>
+            Sonpari ne 31 saal ke baad, Bina Class Ka Darwaja se retirement announce kardiya hai. Fans hue dukhi. #RestInPalang
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h2>
+      SP NEWS
+    </h2>
+
+	  <p>©2026. All Rights Reserved by Sonpari Sanyal</p>
+
+  </footer>
+
+</body>
+</html>
